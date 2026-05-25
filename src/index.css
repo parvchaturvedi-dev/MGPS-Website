@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+html {
+    scroll-behavior: auto;
+}
+
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+
+html.lenis body {
+    overflow-x: hidden;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: smooth !important;
+}
+
+*{
+    user-select: none;
+    
+}
+
+@layer utilities {
+  .animate-text-reveal {
+    animation: text-reveal 1.2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  }
+
+  @keyframes text-reveal {
+    0% {
+      transform: translateY(30px);
+      opacity: 0;
+      filter: blur(5px);
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+
+  /* Buttons ke liye thoda delay */
+  .animation-delay-500 {
+    animation-delay: 0.5s;
+  }
+}
