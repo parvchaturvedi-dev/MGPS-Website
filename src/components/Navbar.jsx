@@ -41,8 +41,8 @@ const Navbar = () => {
         </a></span>
         </div>
         
-          <a href="#footer-section" className="cursor-pointer hover:underline">
-            Get Social
+          <a href="https://www.mghub.marigoldschoolbehror.com" className="cursor-pointer hover:underline">
+            Login
           </a>
         
       </div>
