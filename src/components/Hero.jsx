@@ -36,9 +36,9 @@ const Hero = () => {
 
             <div className="flex flex-wrap gap-6 mt-8 text-gray-600 font-medium">
               <Link to="/about-us">
-              <span className="hover:text-black cursor-pointer transition-colors flex items-center gap-1">
-                25 Years Of Superiority <span className="text-red-500">→</span>
-              </span>
+                <span className="hover:text-black cursor-pointer transition-colors flex items-center gap-1">
+                  26 Years Of Superiority <span className="text-red-500">→</span>
+                </span>
               </Link>
               <br />
               <span
@@ -64,7 +64,7 @@ const Hero = () => {
           />
         </div>
       </div>
-    <Breakpoint />
+      <Breakpoint />
     </section>
   );
 };

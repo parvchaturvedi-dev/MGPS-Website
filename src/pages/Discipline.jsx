@@ -41,7 +41,7 @@ const Discipline = () => {
 
             <div className="grid gap-4">
               {rules.map((rule, index) => (
-                <Motion.div 
+                <Motion.div
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
@@ -59,7 +59,7 @@ const Discipline = () => {
           </div>
         </div>
       </section>
-      <Marquee text="Admissions Open for 2026-27 | 25 Years of Excellence! | Apply Now!" />
+      <Marquee text="Admissions Open for 2026-27 | 26 Years of Excellence! | Apply Now!" />
       <Footer />
     </div>
   );

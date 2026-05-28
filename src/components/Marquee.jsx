@@ -3,7 +3,7 @@ import React from "react";
 const Marquee = () => {
   const content = (
     <>
-      <span className="mx-4">25 Years of Excellence</span>
+      <span className="mx-4">26 Years of Excellence</span>
       <span className="mx-4 text-blue-600">•</span>
       <span className="mx-4">Marigold Secondary School</span>
       <span className="mx-4 text-blue-600">•</span>

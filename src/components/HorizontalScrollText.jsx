@@ -43,8 +43,8 @@ const HorizontalScrollText = () => {
   }, []);
 
   return (
-    <section 
-      ref={sectionRef} 
+    <section
+      ref={sectionRef}
       className="relative h-screen w-full bg-black flex items-center overflow-hidden"
     >
       {/* 🎥 Background Video Container */}
@@ -68,7 +68,7 @@ const HorizontalScrollText = () => {
           ref={textRef}
           className="text-[50vw] font-bold text-white whitespace-nowrap leading-none tracking-tighter px-20 drop-shadow-2xl"
         >
-          25 Years Of Excellence <span className="text-blue-500">.</span>
+          26 Years Of Excellence <span className="text-blue-500">.</span>
         </h2>
       </div>
 
