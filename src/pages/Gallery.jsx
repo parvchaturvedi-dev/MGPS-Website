@@ -47,7 +47,9 @@ const galleryImages = [
   "img.jpg",
   "popup.jpg",
   "side.webp",
-  "typing.png",
+  "muthoot (1).png",
+  "muthoot (2).png",
+  "muthoot (3).png"
 ];
 
 const getCategory = (fileName, index) => {

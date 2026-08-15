@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Autoplay, Pagination } from "swiper/modules";
 import { motion as Motion } from "framer-motion";
 import Projects from "../assets/img (2).jpeg";
-import Culture from "../assets/img (3).jpeg";
+import Culture from "../assets/muthoot (3).png";
 import Sports from "../assets/img (4).jpeg";
 import Arts from "../assets/img (6).jpeg";
 import Achievements from "../assets/img (16).jpeg";
