@@ -126,7 +126,7 @@ const AdmissionForm = () => {
                 </span>
               </Title>
               <Paragraph className="mt-4 text-gray-500 font-light text-lg">
-                Academic Session 2026-27
+                Academic Session 2027-28
               </Paragraph>
             </Motion.div>
           </div>
@@ -374,7 +374,7 @@ const AdmissionForm = () => {
             </form>
           </div>
         </section>
-        <Marquee text="Admissions Open for 2026-27 | Fast-Track Email Enrollment Active!" />
+        <Marquee text="Admissions Open for 2027-28 | Fast-Track Email Enrollment Active!" />
         <Footer />
       </div>
     </ConfigProvider>

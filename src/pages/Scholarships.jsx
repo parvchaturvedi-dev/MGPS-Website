@@ -53,7 +53,7 @@ const Scholarships = () => {
           </div>
         </div>
       </section>
-      <Marquee text="Admissions Open for 2026-27 | Join Marigold's Legacy of Excellence!" />
+      <Marquee text="Admissions Open for 2027-28 | Join Marigold's Legacy of Excellence!" />
       <Footer />
     </div>
   );

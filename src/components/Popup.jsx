@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion as Motion, AnimatePresence } from "framer-motion";
-import PopupImage from "../assets/popup.jpg";
+import PopupImage from "../assets/popup.png";
 import { Link } from "react-router-dom";
 
 const Popup = () => {

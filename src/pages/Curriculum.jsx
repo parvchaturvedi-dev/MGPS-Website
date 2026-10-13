@@ -34,7 +34,7 @@ const Curriculum = () => {
                 <Title level={2} className="tracking-tighter text-4xl">Clarity, Concept & Academic Balance.</Title>
                 <Paragraph className="text-lg text-gray-500 font-light leading-relaxed">
                   At Marigold Secondary School, our curriculum follows the RBSE framework, strengthened with structured teaching methods inspired by the CBSE pattern to ensure clarity, concept understanding, and academic balance. We focus on building strong fundamentals in every subject, encouraging students to develop analytical thinking, effective communication, and disciplined study habits.
-Classroom teaching is interactive, systematic, and aligned with age-appropriate learning goals, ensuring that students progress with confidence and clarity. Beyond academics, equal importance is given to values, moral education, and personality development, helping students grow into responsible individuals with a strong academic foundation and essential life skills.
+Classroom teaching is interactive, systematic, and aligned with age-appropriate learning goals, ensuring that students progress with confidence and clarity. Smart classrooms support this approach by using technology to make lessons more visual, engaging, and interactive. Beyond academics, equal importance is given to values, moral education, and personality development, helping students grow into responsible individuals with a strong academic foundation and essential life skills.
                 </Paragraph>
                 <Paragraph className="text-gray-500 font-light leading-relaxed">
                   Beyond academics, equal importance is given to values, moral education, and personality development, helping students grow into responsible individuals.

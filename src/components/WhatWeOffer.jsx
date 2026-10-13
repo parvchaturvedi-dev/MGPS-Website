@@ -10,8 +10,8 @@ const offers = [
   },
   {
     id: "02",
-    title: "Cultured Infrastructure",
-    description: "Modern facilities and a rich cultural environment that inspire learning and personal growth.",
+    title: "Smart Classrooms",
+    description: "Technology-supported lessons make classroom learning more interactive, visual, and engaging for students.",
     tag: "Infrastructure"
   },
   {

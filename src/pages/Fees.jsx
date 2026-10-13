@@ -27,7 +27,7 @@ const Fees = () => {
       <section className="pt-40 pb-20 bg-slate-50 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <Title className="!text-5xl md:!text-7xl tracking-tighter !m-0">Fee <span className="italic font-serif text-blue-600">Structure</span></Title>
-          <Paragraph className="mt-4 text-gray-400 font-mono text-xs uppercase tracking-widest">Session 2025-26</Paragraph>
+          <Paragraph className="mt-4 text-gray-400 font-mono text-xs uppercase tracking-widest">Session 2027-28</Paragraph>
         </div>
       </section>
 
@@ -44,7 +44,7 @@ const Fees = () => {
           </div>
         </div>
       </section>
-      <Marquee text="Admissions Open for 2026-27 | Join Marigold's Legacy of Excellence!" />
+      <Marquee text="Admissions Open for 2027-28 | Join Marigold's Legacy of Excellence!" />
       <Footer />
     </div>
   );

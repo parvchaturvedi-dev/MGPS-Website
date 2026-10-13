@@ -59,7 +59,7 @@ const Discipline = () => {
           </div>
         </div>
       </section>
-      <Marquee text="Admissions Open for 2026-27 | 26 Years of Excellence! | Apply Now!" />
+      <Marquee text="Admissions Open for 2027-28 | 26 Years of Excellence! | Apply Now!" />
       <Footer />
     </div>
   );

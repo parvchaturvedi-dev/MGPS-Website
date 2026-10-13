@@ -176,7 +176,7 @@ const ContactUs = () => {
           </Row>
         </div>
       </section>
-      <Marquee text="Admissions Open for 2026-27 | Apply Now to Join Marigold's Legacy of Excellence!" />
+      <Marquee text="Admissions Open for 2027-28 | Apply Now to Join Marigold's Legacy of Excellence!" />
       <Footer />
     </div>
   );

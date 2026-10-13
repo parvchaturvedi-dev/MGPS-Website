@@ -30,7 +30,7 @@ const Hero = () => {
           <div className="animate-text-reveal [animation-delay:500ms] opacity-0 [animation-fill-mode:forwards]">
             <Link to="/admission-form">
               <button className="bg-red-600 text-white px-8 py-3 rounded-md font-semibold hover:bg-red-700 transition-all transform hover:scale-105 shadow-lg">
-                Admission Open 2026-27 →
+                Admission Open 2027-28 →
               </button>
             </Link>
 

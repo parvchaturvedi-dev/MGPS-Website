@@ -5,6 +5,7 @@ import { ReactLenis, useLenis } from "lenis/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { AnimatePresence, motion as Motion } from "framer-motion";
+import RouteMetadata from "./components/RouteMetadata";
 
 // Components
 // import SplashScreen from "./components/SplashScreen";
@@ -87,6 +88,7 @@ function App() {
               }}
             >
               <LenisScrollManager />
+              <RouteMetadata />
               <Routes>
                 {/* Public Website Routes */}
                 <Route path="/" element={<Home />} />

@@ -45,7 +45,7 @@ const galleryImages = [
   "img(24).jpg",
   "img(25).jpg",
   "img.jpg",
-  "popup.jpg",
+  "popup.png",
   "side.webp",
   "muthoot (1).png",
   "muthoot (2).png",
@@ -217,7 +217,7 @@ const Gallery = () => {
           </Motion.div>
         )}
       </AnimatePresence>
-      <Marquee text="Admissions Open for 2026-27 | Join Marigold's Legacy of Excellence!" />
+      <Marquee text="Admissions Open for 2027-28 | Join Marigold's Legacy of Excellence!" />
       <Footer />
     </div>
   );

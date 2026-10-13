@@ -27,11 +27,11 @@ const ExamResult = () => {
             </div>
           </Motion.div>
           <Text className="text-gray-400 block max-w-sm mx-auto">
-            We are currently digitizing our academic records for the 2025-26 session. Please check back later for updates.
+            We are currently digitizing our academic records for the 2027-28 session. Please check back later for updates.
           </Text>
         </div>
       </main>
-      <Marquee text="Admissions Open for 2026-27 | Join Marigold's Legacy of Excellence!" />
+      <Marquee text="Admissions Open for 2027-28 | Join Marigold's Legacy of Excellence!" />
       <Footer />
     </div>
   );
