@@ -13,7 +13,7 @@ const OurHistory = () => {
     { title: <Text className="font-bold text-blue-600">2000</Text>, children: 'Foundation laid as Behror’s first English medium institution.' },
     { title: <Text className="font-bold">2010</Text>, children: 'Expansion of modern infrastructure and science laboratories.' },
     { title: <Text className="font-bold">2018</Text>, children: 'Integration of smart classes and technology-driven pedagogy.' },
-    { title: <Text className="font-bold text-blue-600">2025</Text>, children: 'Celebrating 26 Years of educational superiority.' },
+    { title: <Text className="font-bold text-blue-600">2026</Text>, children: 'Celebrating 26 Years of educational superiority.' },
   ];
 
   return (
