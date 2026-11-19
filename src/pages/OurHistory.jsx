@@ -10,10 +10,9 @@ const { Title, Paragraph, Text } = Typography;
 const OurHistory = () => {
   // FIXED: label -> title | children -> content (standard for v5.10+)
   const historyItems = [
-    { title: <Text className="font-bold text-blue-600">2000</Text>, children: 'Foundation laid as Behror’s first English medium institution.' },
-    { title: <Text className="font-bold">2010</Text>, children: 'Expansion of modern infrastructure and science laboratories.' },
-    { title: <Text className="font-bold">2018</Text>, children: 'Integration of smart classes and technology-driven pedagogy.' },
-    { title: <Text className="font-bold text-blue-600">2026</Text>, children: 'Celebrating 26 Years of educational superiority.' },
+    { title: <Text className="font-bold text-blue-600">2000</Text>, children: 'Marigold Secondary School was established in Behror, Rajasthan.' },
+    { title: <Text className="font-bold">Today</Text>, children: 'The school describes a learning approach based on the RBSE framework, structured concept-focused teaching, smart classrooms, values and student development.' },
+    { title: <Text className="font-bold text-blue-600">2026</Text>, children: 'The school marked 26 years since its establishment in 2000.' },
   ];
 
   return (
@@ -34,7 +33,7 @@ const OurHistory = () => {
             <Col xs={24} lg={12}>
               <Title level={2} className="tracking-tighter !mb-8 text-4xl">Building a Tradition of Excellence.</Title>
               <Paragraph className="text-lg text-gray-500 font-light leading-relaxed">
-                Established in 2000, Marigold Secondary School, Behror began with a simple yet powerful vision—to provide quality education rooted in values, discipline, and academic excellence. What started as a small institution with limited resources has grown into a respected educational establishment known for its dedication, commitment, and student-centric approach.Over the past 26 Years, the school has continuously evolved to meet the changing needs of education. Classrooms, infrastructure, teaching methods, and learning environments have progressed from traditional systems to modern, technology-enabled education. Through persistent effort and strong leadership, Marigold Secondary School has built a strong foundation where students are encouraged to learn, explore, grow, and excel.Today, the institution stands as a symbol of trust in the community—proud of its journey, achievements, and the thousands of students who have walked through its doors and moved ahead to build successful futures.
+                Marigold Secondary School was established in Behror in 2000. Its published history describes an ongoing development of classrooms, infrastructure and teaching methods. Today, the school describes its academic programme as following the RBSE framework, with structured teaching methods inspired by the CBSE pattern. The school states that its learning priorities include subject fundamentals, conceptual clarity, analytical thinking, communication, disciplined study habits, values and personality development.
               </Paragraph>
             </Col>
             <Col xs={24} lg={12}>

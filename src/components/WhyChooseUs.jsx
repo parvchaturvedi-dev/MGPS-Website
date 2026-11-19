@@ -5,7 +5,7 @@ import Breakpoint2 from "./Breakpoint2";
 
 const headingText = "Why Choose Us";
 const paraText =
-  "At Marigold School, we believe in nurturing young minds with a perfect balance of academics, creativity, discipline, and values. Our experienced faculty, modern infrastructure, and student-focused approach ensure that every child grows into a confident, capable, and responsible individual ready to face the future.";
+  "Marigold Secondary School in Behror serves students from Pre-Nursery to Grade 10. The school states that it follows the RBSE framework and uses structured, CBSE-inspired teaching methods. Its published curriculum emphasizes subject fundamentals, conceptual understanding, analytical thinking, communication, disciplined study habits, values, and age-appropriate learning goals.";
 
 const WhyChooseUs = () => {
   const ref = useRef(null);

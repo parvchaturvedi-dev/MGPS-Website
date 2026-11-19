@@ -37,6 +37,10 @@ const EMPTY_FORM_VALUES = {
 };
 
 function readAdmissionDraft() {
+  if (typeof window === "undefined") {
+    return { values: EMPTY_FORM_VALUES, error: null };
+  }
+
   try {
     const storedDraft = sessionStorage.getItem(ADMISSION_DRAFT_KEY);
     if (!storedDraft) return { values: EMPTY_FORM_VALUES, error: null };

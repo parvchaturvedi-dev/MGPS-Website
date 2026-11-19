@@ -10,6 +10,8 @@ const defaultPreferences = {
 };
 
 function readSavedPreferences() {
+  if (typeof window === "undefined") return null;
+
   try {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (!stored) return null;

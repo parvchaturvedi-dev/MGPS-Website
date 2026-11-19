@@ -25,13 +25,18 @@ const OurFounder = () => {
                 
                 <Title className="!text-5xl md:!text-6xl tracking-tighter">Mr. V. K. Chaturvedi <br/><span className="italic font-serif text-blue-600">The Visionary</span></Title>
                 <Paragraph className="text-lg text-gray-500 font-light leading-relaxed">
-                  Marigold Secondary School owes its foundation and legacy to Mr. V. K. Chaturvedi, a visionary educationist whose commitment and determination transformed a dream into reality. With a forward-thinking mindset and a strong belief in the power of education, he established Marigold Secondary School as Behror’s first English medium institution, at a time when quality English education was limited and rarely accessible in the region.His mission was not only to build a school but to create a platform where children could receive modern education without losing their cultural values, discipline, and moral grounding. Through his persistent efforts, guidance, and leadership, the school grew from a modest beginning into a respected educational institution known for excellence, integrity, and student-focused learning.Today, Mr. Chaturvedi’s vision continues to guide the institution. His legacy lives on in every classroom, every achievement, and every student who walks forward confidently into the future. Marigold Secondary School stands as a proud reminder of his lifelong dedication to serving the community through education and empowering generations to grow, learn, and lead.
+                  The school’s published history records that Mr. V. K. Chaturvedi founded Marigold Secondary School in Behror in 2000. The institution describes its educational approach as combining academic learning with discipline, values and student development. Its current curriculum information identifies the Rajasthan Board (RBSE) framework and describes structured, concept-focused teaching.
                 </Paragraph>
-                <div className="p-10 bg-slate-900 rounded-[2rem] text-white">
-                  <Paragraph className="text-xl font-light italic !text-white !mb-4">
-                    “Education is not just learning lessons, but shaping character.”
+                <div className="p-8 bg-slate-900 rounded-[2rem] text-white">
+                  <Text className="!text-white font-mono text-xs uppercase tracking-widest">
+                    School information
+                  </Text>
+                  <Paragraph className="!text-white !mt-3 !mb-0">
+                    Marigold Secondary School serves learners from Pre-Nursery
+                    through Grade 10 at its campus on Hamindpur Road, Behror.
+                    Families can contact the school for current academic and
+                    admission information.
                   </Paragraph>
-                  <Text className="!text-white font-mono text-xs uppercase tracking-widest">— Message from the Director</Text>
                 </div>
               </div>
             </Col>

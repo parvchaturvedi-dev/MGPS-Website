@@ -14,21 +14,21 @@ const { Title, Paragraph, Text } = Typography;
 const AboutUs = () => {
   const stats = [
     {
-      label: "Years of Excellence",
-      value: 25,
-      suffix: "+",
+      label: "Established",
+      value: 2000,
+      suffix: "",
       icon: <SafetyCertificateOutlined />,
     },
     {
-      label: "Classes",
-      value: "Nursery - X",
+      label: "School levels",
+      value: "Pre-Nursery–10",
       suffix: "",
       icon: <ThunderboltOutlined />,
     },
     {
-      label: "Holistic Approach",
-      value: 100,
-      suffix: "%",
+      label: "Curriculum",
+      value: "RBSE",
+      suffix: "",
       icon: <UsergroupAddOutlined />,
     },
   ];
@@ -54,11 +54,11 @@ const AboutUs = () => {
               >
                 <img
                   src={Logo}
-                  alt="Marigold Campus Life"
+                  alt="Marigold Secondary School logo"
                   /* MOBILE: h-auto aur aspect-square taaki image cut na ho. 
            DESKTOP: h-[500px] maintain kiya hai. 
         */
-                  className="w-full h-auto aspect-square md:aspect-auto md:h-125 object-cover object-center"
+                  className="w-full h-auto aspect-square md:aspect-auto md:h-125 object-contain object-center"
                 />
               </Motion.div>
 
@@ -109,19 +109,16 @@ const AboutUs = () => {
 
                 <div className="space-y-4 md:space-y-6">
                   <Paragraph className="text-base md:text-lg text-gray-500 font-light leading-relaxed">
-                    Marigold Secondary School is a distinguished educational
-                    institution in Behror, renowned for its{" "}
-                    <Text strong className="text-black">
-                      commitment to academic excellence
-                    </Text>{" "}
-                    and holistic development. Since 2000, we have provided a
-                    stimulating learning environment equipped with modern
-                    infrastructure.
+                    Marigold Secondary School is an educational institution in
+                    Behror, established in 2000. The school describes its
+                    approach as combining academic learning with student
+                    development and a technology-supported learning
+                    environment.
                   </Paragraph>
 
                   <Paragraph className="text-sm md:text-base text-gray-500 font-light leading-relaxed">
-                    Our primary objective is to foster the all-round development
-                    of every child, helping them grow into{" "}
+                    The school aims to support the development of every child,
+                    helping students grow into{" "}
                     <Text italic>
                       confident, responsible, and compassionate
                     </Text>{" "}
@@ -146,7 +143,7 @@ const AboutUs = () => {
                         {/* Mobile par Space vertical na ho isliye direction="horizontal" (default) rakhein */}
                         <Space
                           align="start"
-                          size={window.innerWidth < 768 ? 4 : "middle"}
+                          size="middle"
                         >
                           <div className="text-blue-600 text-base md:text-xl mt-1">
                             {item.icon}

@@ -10,20 +10,22 @@
 - Established: 2000
 - Phone: +91-9414638988
 - Email: marigoldvijay@gmail.com
-- Official website: https://marigoldschoolbehror.com/
+- Official website: https://www.marigoldschoolbehror.com/
 
 ## Pages
 
-- [Home](https://marigoldschoolbehror.com/): School overview, current admission information and frequently asked questions.
-- [About Us](https://marigoldschoolbehror.com/about-us): School approach and institutional information.
-- [Curriculum](https://marigoldschoolbehror.com/curriculum): Academic curriculum information.
-- [Admission Process](https://marigoldschoolbehror.com/admission-process): Steps and information for applying.
-- [Admission Policy](https://marigoldschoolbehror.com/admission-policy): Admission policy and requirements.
-- [Admission Form](https://marigoldschoolbehror.com/admission-form): Admission application.
-- [Fees](https://marigoldschoolbehror.com/fees): Fee information.
-- [Scholarships](https://marigoldschoolbehror.com/scholarships): Scholarship information.
-- [Our History](https://marigoldschoolbehror.com/our-history): School history.
-- [Contact Us](https://marigoldschoolbehror.com/contact-us): Official contact information and location.
-- [Gallery](https://marigoldschoolbehror.com/gallery): School events and campus photos.
+- [Home](https://www.marigoldschoolbehror.com/): School overview, current admission information and frequently asked questions.
+- [About Us](https://www.marigoldschoolbehror.com/about-us): School approach and institutional information.
+- [Curriculum](https://www.marigoldschoolbehror.com/curriculum): Academic curriculum information.
+- [Admission Process](https://www.marigoldschoolbehror.com/admission-process): Steps and information for applying.
+- [Admission Policy](https://www.marigoldschoolbehror.com/admission-policy): Admission policy and requirements.
+- [Admission Form](https://www.marigoldschoolbehror.com/admission-form): Admission application.
+- [Fees](https://www.marigoldschoolbehror.com/fees): Fee information.
+- [Scholarships](https://www.marigoldschoolbehror.com/scholarships): Scholarship information.
+- [Our History](https://www.marigoldschoolbehror.com/our-history): School history.
+- [Contact Us](https://www.marigoldschoolbehror.com/contact-us): Official contact information and location.
+- [Gallery](https://www.marigoldschoolbehror.com/gallery): School events and campus photos.
+
+For a detailed, machine-readable school overview, see [llms-full.txt](https://www.marigoldschoolbehror.com/llms-full.txt).
 
 For current details, refer to the relevant page on the official website. Admission availability, fees and other time-sensitive details may change.

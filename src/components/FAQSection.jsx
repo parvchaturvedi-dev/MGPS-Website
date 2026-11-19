@@ -74,6 +74,34 @@ const faqs = [
     link: "/our-history",
     linkText: "Explore the school's history",
   },
+  {
+    question: "Is Marigold Secondary School affiliated with RBSE or CBSE?",
+    answer:
+      "The curriculum page identifies the Rajasthan Board (RBSE) as the school's curriculum framework and describes some teaching methods as inspired by the CBSE pattern. This wording refers to teaching approach, not CBSE affiliation. Families should contact the school to confirm the applicable board details and examination requirements for a particular grade and academic session.",
+    link: "/curriculum",
+    linkText: "Read about the curriculum",
+  },
+  {
+    question: "What is the fee for Pre-Nursery?",
+    answer:
+      "The published 2027–28 fee table shows tuition amounts for Nursery–UKG and Classes 1–10, but does not list a separate Pre-Nursery amount. Because the admission form includes Pre-Nursery, families should contact the school office to confirm the class-specific tuition, other charges and payment schedule before making a payment.",
+    link: "/fees",
+    linkText: "Review fee information",
+  },
+  {
+    question: "Does the school publish examination results or topper lists online?",
+    answer:
+      "The school website does not currently publish verified class-wise result sheets, named toppers or pass-percentage data. For official examination information, parents or guardians can contact the school and mention the relevant class and academic session. Avoid sharing a student's marks or personal documents in public comments or social-media posts.",
+    link: "/exam-result",
+    linkText: "Read result enquiry information",
+  },
+  {
+    question: "How can I confirm admission requirements for the current year?",
+    answer:
+      "Admission dates, seat availability, age criteria and assessment arrangements can vary by session and class. The website describes the general application steps, supporting documents and selection process, but families should confirm the current requirements with the school office before applying. Contact the school directly for the latest form, eligibility details and any additional documents.",
+    link: "/admission-process",
+    linkText: "Review the admission process",
+  },
 ];
 
 const FAQSection = () => (

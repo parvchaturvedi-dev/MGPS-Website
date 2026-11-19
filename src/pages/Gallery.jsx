@@ -82,6 +82,8 @@ const defaultMediaItems = galleryImages.map((fileName, index) => ({
 }));
 
 const getInitialMediaItems = () => {
+  if (typeof window === "undefined") return defaultMediaItems;
+
   try {
     const saved = localStorage.getItem(storageKey);
     if (saved) {

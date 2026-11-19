@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { motion as Motion, useScroll, useSpring } from "framer-motion";
 
 const Breakpoint = () => {

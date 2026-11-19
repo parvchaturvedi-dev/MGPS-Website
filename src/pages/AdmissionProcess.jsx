@@ -2,6 +2,7 @@ import React from "react";
 import { Typography, Row, Col, Card } from "antd";
 import { motion as Motion } from "framer-motion";
 import { FileSearchOutlined, SendOutlined, TeamOutlined, TrophyOutlined, CheckCircleOutlined } from "@ant-design/icons";
+import { Link } from "react-router-dom";
 import Navbar from '../components/Navbar';
 import Marquee from '../components/Marquee';
 import Footer from '../components/Footer';
@@ -57,6 +58,98 @@ const AdmissionProcess = () => {
               Admissions are open to all irrespective of caste, creed, or race. A child must have completed 3 years on July 1st for L.K.G. Admission is granted only on the basis of Entrance Test and Merit.
             </Paragraph>
           </div>
+
+          <div className="mt-12 grid gap-8 md:grid-cols-2">
+            <section aria-labelledby="admission-documents-heading" className="rounded-3xl border border-slate-200 p-8">
+              <Title id="admission-documents-heading" level={2}>Documents to prepare</Title>
+              <Paragraph className="text-gray-600 leading-relaxed">
+                The published admission guidance asks families to submit the
+                application with supporting documents. Prepare the following
+                and confirm with the school whether any additional or updated
+                documents are needed for the student’s class and session.
+              </Paragraph>
+              <ul className="list-disc space-y-2 pl-6 text-gray-600">
+                <li>Student’s birth certificate</li>
+                <li>Previous school report card, where applicable</li>
+                <li>Transfer Certificate (TC), where applicable</li>
+                <li>Student photographs</li>
+              </ul>
+            </section>
+
+            <section aria-labelledby="admission-assessment-heading" className="rounded-3xl border border-slate-200 p-8">
+              <Title id="admission-assessment-heading" level={2}>Age and assessment</Title>
+              <Paragraph className="text-gray-600 leading-relaxed">
+                The current admission page states that an LKG applicant must
+                have completed three years by 1 July. It describes an
+                interaction for primary classes and a written test or
+                interview for senior classes. Ask the office to confirm the
+                applicable age cut-off, assessment format and grade placement
+                for the 2027–28 session.
+              </Paragraph>
+              <Paragraph className="!mb-0 text-gray-600 leading-relaxed">
+                The school states that selection is based on merit and
+                assessment performance. Applying does not guarantee a seat;
+                availability and final requirements should be confirmed with
+                the school.
+              </Paragraph>
+            </section>
+          </div>
+
+          <section aria-labelledby="admission-faq-heading" className="mt-12">
+            <Title id="admission-faq-heading" level={2}>Admission questions</Title>
+            <div className="mt-5 space-y-3">
+              <details className="rounded-2xl border border-slate-200 p-5">
+                <summary className="cursor-pointer font-semibold text-slate-900">
+                  Where can I get the admission form?
+                </summary>
+                <p className="mb-0 mt-3 leading-relaxed text-gray-600">
+                  The school’s published process says families may obtain a
+                  form from the school office or use the online admission form
+                  when applications open. Contact the school to confirm that
+                  applications are currently being accepted.
+                </p>
+              </details>
+              <details className="rounded-2xl border border-slate-200 p-5">
+                <summary className="cursor-pointer font-semibold text-slate-900">
+                  What happens after a student is selected?
+                </summary>
+                <p className="mb-0 mt-3 leading-relaxed text-gray-600">
+                  The published process says selected candidates receive an
+                  offer letter. The family should follow the instructions in
+                  that communication and confirm the current fee amount and
+                  payment schedule with the school before paying.
+                </p>
+              </details>
+              <details className="rounded-2xl border border-slate-200 p-5">
+                <summary className="cursor-pointer font-semibold text-slate-900">
+                  How do I confirm fees and seat availability?
+                </summary>
+                <p className="mb-0 mt-3 leading-relaxed text-gray-600">
+                  Fees and available seats may change by session and grade.
+                  Review the published{" "}
+                  <Link className="font-semibold text-blue-700 underline" to="/fees">
+                    fee information
+                  </Link>{" "}
+                  and contact the office for the amount payable for a specific
+                  student.
+                </p>
+              </details>
+            </div>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Link
+                to="/admission-form"
+                className="rounded-full bg-blue-700 px-6 py-3 font-semibold text-white hover:bg-blue-800"
+              >
+                Open admission form
+              </Link>
+              <Link
+                to="/admission-policy"
+                className="rounded-full border border-slate-300 px-6 py-3 font-semibold text-slate-700 hover:bg-slate-50"
+              >
+                Read admission policy
+              </Link>
+            </div>
+          </section>
         </div>
       </section>
       <Marquee text="Admissions Open for 2027-28 | Apply Now to Join Marigold's Legacy of Excellence!" />
