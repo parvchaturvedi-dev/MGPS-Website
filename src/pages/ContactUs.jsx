@@ -13,6 +13,7 @@ import {
 } from "@ant-design/icons";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import ConsentAwareMap from "../components/ConsentAwareMap";
 
 const { Title, Paragraph, Text } = Typography;
 
@@ -22,7 +23,7 @@ const ContactUs = () => {
       icon: <EnvironmentOutlined className="text-blue-600 text-2xl" />,
       title: "School Address",
       content:
-        "Near Nagarpalika Board, Hamindpur Road, Behror, Rajasthan 301701",
+        "Near Bypass Chowk, Hamindpur Road, Behror, Rajasthan 301701",
     },
     {
       icon: <PhoneOutlined className="text-blue-600 text-2xl" />,
@@ -135,16 +136,11 @@ const ContactUs = () => {
               <div className="flex flex-col gap-8 h-full">
                 {/* Google Maps Embed */}
                 <div className="w-full h-[450px] rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white bg-slate-200">
-                  <iframe
-                    title="Marigold School Location"
+                  <ConsentAwareMap
+                    title="Marigold Secondary School location"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3513.7547164475454!2d76.26345357596043!3d27.896772476075193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396daf4110060b03%3A0xf38792121128f2be!2sMarigold%20Secondary%20School!5e0!3m2!1sen!2sin!4v1716200000000!5m2!1sen!2sin"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen=""
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  ></iframe>
+                    className="h-full w-full"
+                  />
                 </div>
 
                 {/* Office Hours */}

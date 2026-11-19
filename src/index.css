@@ -13,6 +13,32 @@ html.lenis body {
     overflow-x: hidden;
 }
 
+.legal-copy {
+    color: #475569;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.legal-copy > p {
+    margin-block: 1rem;
+}
+
+.legal-copy > h2 {
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    color: #0f172a;
+    font-size: 1.35rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.legal-copy a {
+    color: #1d4ed8;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
 .lenis.lenis-smooth {
     scroll-behavior: smooth !important;
 }

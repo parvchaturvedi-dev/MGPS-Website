@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import videoSrc from "../assets/HorizontalTextBg.mp4";
@@ -9,6 +9,21 @@ const HorizontalScrollText = () => {
   const sectionRef = useRef(null);
   const textRef = useRef(null);
   const videoRef = useRef(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const observer = new IntersectionObserver((entries) => {
+      if (entries.some((entry) => entry.isIntersecting)) {
+        video.src = videoSrc;
+        observer.disconnect();
+      }
+    }, { rootMargin: "300px 0px" });
+
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, []);
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
@@ -56,10 +71,9 @@ const HorizontalScrollText = () => {
           muted
           loop
           playsInline
+          preload="none"
           className="w-full h-full object-cover grayscale-40% brightness-60%"
-        >
-          <source src={videoSrc} type="video/mp4" />
-        </video>
+        />
       </div>
 
       {/* ✍️ Floating Content */}

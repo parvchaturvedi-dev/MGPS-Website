@@ -19,11 +19,14 @@ import {
 } from "@ant-design/icons";
 import { motion as Motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import ConsentAwareMap from "./ConsentAwareMap";
+import useCookieConsent from "./useCookieConsent";
 import Logo from "../assets/logo.png";
 
 const { Title, Text, Paragraph } = Typography;
 
 const FullFooter = () => {
+  const { openPreferences } = useCookieConsent();
   const quickLinks = [
     {
       title: "Institution",
@@ -175,15 +178,10 @@ const FullFooter = () => {
           {/* --- MAP SECTION --- */}
           <div className="mt-20 overflow-hidden rounded-4xl shadow-2xl border-8 border-white group relative">
             <div className="absolute inset-0 bg-blue-600/5 pointer-events-none group-hover:bg-transparent transition-colors z-10" />
-            <iframe
+            <ConsentAwareMap
+              title="Marigold Secondary School location"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3526.1696199001794!2d76.26306727526094!3d27.89676767607446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396d4d4110060bc3%3A0xf38792121129f28a!2sMarigold%20Secondary%20School!5e0!3m2!1sen!2sin!4v1776352141102!5m2!1sen!2sin"
-              width="100%"
-              height="450"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="grayscale contrast-125 hover:grayscale-0 transition-all duration-700"
+              className="h-[450px] w-full grayscale contrast-125 hover:grayscale-0 transition-all duration-700"
             />
           </div>
 
@@ -219,15 +217,26 @@ const FullFooter = () => {
               </div>
             </div>
 
-            <div className="flex gap-6 order-1 md:order-2">
-              {["Privacy", "Terms", "Sitemap"].map((item) => (
-                <Text
-                  key={item}
-                  className="text-[10px] font-mono uppercase tracking-widest text-gray-400 cursor-pointer hover:text-black transition-colors"
-                >
-                  {item}
-                </Text>
-              ))}
+            <div className="flex flex-wrap gap-4 md:gap-6 order-1 md:order-2">
+              <Link to="/privacy-policy" className="text-[10px] font-mono uppercase tracking-widest text-gray-500 hover:text-black transition-colors">
+                Privacy Policy
+              </Link>
+              <Link to="/cookie-policy" className="text-[10px] font-mono uppercase tracking-widest text-gray-500 hover:text-black transition-colors">
+                Cookie Policy
+              </Link>
+              <Link to="/terms" className="text-[10px] font-mono uppercase tracking-widest text-gray-500 hover:text-black transition-colors">
+                Terms
+              </Link>
+              <a href="/sitemap.xml" className="text-[10px] font-mono uppercase tracking-widest text-gray-500 hover:text-black transition-colors">
+                Sitemap
+              </a>
+              <button
+                type="button"
+                onClick={openPreferences}
+                className="text-[10px] font-mono uppercase tracking-widest text-gray-500 hover:text-black transition-colors"
+              >
+                Cookie Settings
+              </button>
             </div>
           </div>
 

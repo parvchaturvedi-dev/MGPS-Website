@@ -1,0 +1,29 @@
+# Marigold Secondary School
+
+> Marigold Secondary School is a school in Behror, Rajasthan, India. The school website provides information about academics, admissions, fees, scholarships, school history and contact details.
+
+## School facts
+
+- Name: Marigold Secondary School
+- Location: Near Bypass Chowk, Hamindpur Road, Behror, Rajasthan 301701, India
+- Education levels: Pre-Nursery to Grade 10
+- Established: 2000
+- Phone: +91-9414638988
+- Email: marigoldvijay@gmail.com
+- Official website: https://marigoldschoolbehror.com/
+
+## Pages
+
+- [Home](https://marigoldschoolbehror.com/): School overview, current admission information and frequently asked questions.
+- [About Us](https://marigoldschoolbehror.com/about-us): School approach and institutional information.
+- [Curriculum](https://marigoldschoolbehror.com/curriculum): Academic curriculum information.
+- [Admission Process](https://marigoldschoolbehror.com/admission-process): Steps and information for applying.
+- [Admission Policy](https://marigoldschoolbehror.com/admission-policy): Admission policy and requirements.
+- [Admission Form](https://marigoldschoolbehror.com/admission-form): Admission application.
+- [Fees](https://marigoldschoolbehror.com/fees): Fee information.
+- [Scholarships](https://marigoldschoolbehror.com/scholarships): Scholarship information.
+- [Our History](https://marigoldschoolbehror.com/our-history): School history.
+- [Contact Us](https://marigoldschoolbehror.com/contact-us): Official contact information and location.
+- [Gallery](https://marigoldschoolbehror.com/gallery): School events and campus photos.
+
+For current details, refer to the relevant page on the official website. Admission availability, fees and other time-sensitive details may change.

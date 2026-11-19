@@ -1,98 +1,181 @@
-import React, { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useForm, Controller } from "react-hook-form";
+import dayjs from "dayjs";
 import {
   Typography,
   Input,
   Select,
   DatePicker,
   Radio,
-  Upload,
+  Checkbox,
   Button,
   Row,
   Col,
   message,
   ConfigProvider,
 } from "antd";
-import {
-  InboxOutlined,
-  SaveOutlined,
-  SendOutlined,
-  UserOutlined,
-  PhoneOutlined,
-  MailOutlined,
-} from "@ant-design/icons";
+import { SendOutlined, UserOutlined, PhoneOutlined, MailOutlined } from "@ant-design/icons";
 import { motion as Motion } from "framer-motion";
-import emailjs from "@emailjs/browser"; // EmailJS Import kiya
+import { Link } from "react-router-dom";
+import emailjs from "@emailjs/browser";
 import Navbar from "../components/Navbar";
 import Marquee from "../components/Marquee";
 import Footer from "../components/Footer";
 
 const { Title, Text, Paragraph } = Typography;
-const { Dragger } = Upload;
+const ADMISSION_SESSION = "2027-28";
+const ADMISSION_DRAFT_KEY = "marigold-admission-draft-v1";
+const EMPTY_FORM_VALUES = {
+  fullName: "",
+  dob: null,
+  gender: "male",
+  class: "",
+  fatherName: "",
+  phone: "",
+  email: "",
+  guardianConsent: false,
+};
+
+function readAdmissionDraft() {
+  try {
+    const storedDraft = sessionStorage.getItem(ADMISSION_DRAFT_KEY);
+    if (!storedDraft) return { values: EMPTY_FORM_VALUES, error: null };
+
+    const draft = JSON.parse(storedDraft);
+    if (!draft || typeof draft !== "object" || Array.isArray(draft)) {
+      throw new Error("Saved admission draft has an invalid format.");
+    }
+
+    return {
+      values: {
+        fullName: typeof draft.fullName === "string" ? draft.fullName : "",
+        dob:
+          typeof draft.dob === "string" && dayjs(draft.dob).isValid()
+            ? dayjs(draft.dob)
+            : null,
+        gender: ["male", "female", "other"].includes(draft.gender)
+          ? draft.gender
+          : "male",
+        class: typeof draft.class === "string" ? draft.class : "",
+        fatherName: typeof draft.fatherName === "string" ? draft.fatherName : "",
+        phone: typeof draft.phone === "string" ? draft.phone : "",
+        email: typeof draft.email === "string" ? draft.email : "",
+        guardianConsent: draft.guardianConsent === true,
+      },
+      error: null,
+    };
+  } catch (error) {
+    try {
+      sessionStorage.removeItem(ADMISSION_DRAFT_KEY);
+    } catch (clearError) {
+      console.error("Could not clear the invalid admission draft:", clearError);
+    }
+    return { values: EMPTY_FORM_VALUES, error };
+  }
+}
 
 const AdmissionForm = () => {
   const [messageApi, contextHolder] = message.useMessage();
   const [loading, setLoading] = useState(false);
+  const [draftState] = useState(readAdmissionDraft);
+  const draftSaveErrorShown = useRef(false);
 
   const {
     control,
     handleSubmit,
     reset,
+    watch,
     formState: { errors },
-  } = useForm({
-    defaultValues: {
-      fullName: "",
-      dob: null,
-      gender: "male",
-      class: "",
-      fatherName: "",
-      phone: "",
-      email: "",
-    },
-  });
+  } = useForm({ defaultValues: draftState.values });
 
-  // --- YE WALA FUNCTION BADLA HAI ---
+  useEffect(() => {
+    if (!draftState.error) return;
+
+    console.error("Could not restore the saved admission draft:", draftState.error);
+    messageApi.warning(
+      "The saved draft could not be restored. Please enter your details again.",
+    );
+  }, [draftState.error, messageApi]);
+
+  useEffect(() => {
+    const subscription = watch((values) => {
+      try {
+        sessionStorage.setItem(
+          ADMISSION_DRAFT_KEY,
+          JSON.stringify({
+            ...values,
+            dob: values.dob?.isValid() ? values.dob.toISOString() : null,
+          }),
+        );
+        draftSaveErrorShown.current = false;
+      } catch (error) {
+        console.error("Could not save the admission draft:", error);
+        if (!draftSaveErrorShown.current) {
+          messageApi.error(
+            "Your draft could not be saved. Keep this tab open to avoid losing your entries.",
+          );
+          draftSaveErrorShown.current = true;
+        }
+      }
+    });
+
+    return () => subscription.unsubscribe();
+  }, [messageApi, watch]);
+
   const onSubmit = async (data) => {
     setLoading(true);
-    const currentYear = new Date().getFullYear();
-    const nextYearShort = (currentYear + 1).toString().slice(-2);
-    const dynamicSession = `${currentYear}-${nextYearShort}`;
 
-    // EmailJS ke liye data taiyar kiya
     const templateParams = {
       fullName: data.fullName,
-      session: dynamicSession,
+      session: ADMISSION_SESSION,
       dob: data.dob ? data.dob.format("DD-MM-YYYY") : "Not Provided",
       gender: data.gender,
       class: data.class,
       fatherName: data.fatherName,
       phone: data.phone,
       email: data.email,
+      guardianConsent: "Confirmed",
+      consentTimestamp: new Date().toISOString(),
     };
 
     try {
-      // EmailJS Call
-      // Pehle 3 params apni EmailJS dashboard se replace karein
       await emailjs.send(
-        "service_wavhq1z", // <--- Apni Service ID yahan dalein
-        "template_up33a8s", // <--- Apni Template ID yahan dalein
+        "service_cb2e2o9",
+        "template_up33a8s",
         templateParams,
-        "rXZe0qP89fPZViTtU", // <--- Apni Public Key yahan dalein
+        "rXZe0qP89fPZViTtU",
       );
 
       messageApi.success(
-        "Application submitted successfully! Check your email for confirmation.",
+        "Application submitted. The school will contact you using the details provided.",
       );
-      reset(); // Form clear kar dega
+      reset(EMPTY_FORM_VALUES);
+      try {
+        sessionStorage.removeItem(ADMISSION_DRAFT_KEY);
+      } catch (error) {
+        console.error("Could not clear the submitted admission draft:", error);
+        messageApi.warning(
+          "The application was submitted, but the saved draft could not be cleared. Please close this tab.",
+        );
+      }
     } catch (error) {
       console.error("Form Error:", error);
-      messageApi.error("Submission failed. Please try again later.");
+      const errorDetails =
+        typeof error === "string"
+          ? error
+          : error && typeof error === "object" && "text" in error
+            ? String(error.text)
+            : error instanceof Error
+              ? error.message
+              : "Please check your connection and try again.";
+      messageApi.error(`Application could not be submitted. ${errorDetails}`);
     } finally {
       setLoading(false);
     }
   };
 
   const classes = [
+    "Pre-Nursery",
     "Nursery",
     "LKG",
     "UKG",
@@ -126,7 +209,7 @@ const AdmissionForm = () => {
                 </span>
               </Title>
               <Paragraph className="mt-4 text-gray-500 font-light text-lg">
-                Academic Session 2027-28
+                Academic Session {ADMISSION_SESSION}
               </Paragraph>
             </Motion.div>
           </div>
@@ -138,6 +221,13 @@ const AdmissionForm = () => {
               onSubmit={handleSubmit(onSubmit)}
               className="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-slate-100"
             >
+              <p className="mb-8 rounded-xl bg-blue-50 px-4 py-3 text-sm leading-relaxed text-slate-600">
+                Your entries are saved temporarily in this tab so they remain
+                available after a refresh. They are sent only when you submit
+                the form and are cleared after successful submission or when
+                this tab session ends. Avoid using a shared device.
+              </p>
+
               {/* --- Student Info --- */}
               <div className="mb-12">
                 <div className="flex items-center gap-3 mb-8 border-b pb-4">
@@ -311,6 +401,9 @@ const AdmissionForm = () => {
                       render={({ field }) => (
                         <Input
                           {...field}
+                          type="tel"
+                          inputMode="numeric"
+                          maxLength={10}
                           prefix={<span className="text-gray-400">+91</span>}
                           className={inputStyle}
                           status={errors.phone ? "error" : ""}
@@ -355,6 +448,45 @@ const AdmissionForm = () => {
                     </Text>
                   )}
                 </div>
+              </div>
+
+              <div className="border-t border-slate-100 pt-6">
+                <Controller
+                  name="guardianConsent"
+                  control={control}
+                  rules={{
+                    validate: (value) =>
+                      value ||
+                      "Please confirm that you are an adult applicant or the student's parent/legal guardian.",
+                  }}
+                  render={({ field }) => (
+                    <Checkbox
+                      checked={field.value}
+                      onChange={(event) => field.onChange(event.target.checked)}
+                    >
+                      <span className="whitespace-normal text-sm leading-relaxed text-slate-700">
+                        I confirm that I am at least 18 years old, or I am the
+                        applicant’s parent or legal guardian submitting this
+                        application on their behalf. I am authorised to provide
+                        this information and consent to its processing for
+                        admission and related school communication.
+                      </span>
+                    </Checkbox>
+                  )}
+                />
+                {errors.guardianConsent && (
+                  <Text type="danger" className="mt-2 block text-sm">
+                    {errors.guardianConsent.message}
+                  </Text>
+                )}
+                <p className="mt-4 text-sm leading-relaxed text-slate-500">
+                  By submitting, you confirm that you have read the{" "}
+                  <Link to="/privacy-policy" className="font-semibold text-blue-600 underline">
+                    Privacy Policy
+                  </Link>
+                  . Application details are transmitted to the school through
+                  EmailJS for admission processing.
+                </p>
               </div>
 
               {/* --- Buttons --- */}

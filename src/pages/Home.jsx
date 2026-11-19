@@ -9,6 +9,7 @@ import StatsSection from "../components/StatsSection";
 import VoicesAndLegacy from "../components/VoicesAndLegacy";
 import Marquee from "../components/Marquee";
 import FullFooter from "../components/Footer";
+import FAQSection from "../components/FAQSection";
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
       <HomeGallery />
       <StatsSection />
       <VoicesAndLegacy />
+      <FAQSection />
       <Marquee />
       <FullFooter />
     </>

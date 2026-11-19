@@ -8,7 +8,7 @@ const pageMetadata = {
   '/': {
     title: 'Marigold Secondary School Behror | Admissions Open 2027-28',
     description:
-      'Discover Marigold Secondary School in Behror, Rajasthan. Quality education, experienced faculty and modern learning for Pre-Nursery to Grade 10. Admissions open for 2027-28.',
+      'Discover Marigold Secondary School in Behror, Rajasthan. Explore Pre-Nursery to Grade 10, academics, admissions, fees, facilities and FAQs.',
   },
   '/about-us': {
     title: 'About Marigold Secondary School | Behror',
@@ -80,6 +80,21 @@ const pageMetadata = {
     description:
       'Learn about scholarships at Marigold Secondary School, Behror, including consideration of entrance test performance and previous academic records.',
   },
+  '/privacy-policy': {
+    title: 'Privacy Policy | Marigold Secondary School Behror',
+    description:
+      'Read how Marigold Secondary School handles admission applications, personal information, third-party services and privacy requests.',
+  },
+  '/cookie-policy': {
+    title: 'Cookie Policy | Marigold Secondary School Behror',
+    description:
+      'Learn about essential browser storage, optional Google Maps content and how to manage cookie preferences on the school website.',
+  },
+  '/terms': {
+    title: 'Website Terms of Use | Marigold Secondary School Behror',
+    description:
+      'Review the terms for using the Marigold Secondary School website and submitting an admission application.',
+  },
 }
 
 function RouteMetadata() {
@@ -102,6 +117,16 @@ function RouteMetadata() {
     )
   }
 
+  if (page.noindex) {
+    return (
+      <Helmet>
+        <title>{page.title}</title>
+        <meta name="description" content={page.description} />
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
+    )
+  }
+
   return (
     <Helmet>
       <title>{page.title}</title>
@@ -113,6 +138,19 @@ function RouteMetadata() {
       <meta property="og:description" content={page.description} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:image" content={defaultImage} />
+      <script type="application/ld+json">
+        {JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'WebPage',
+          '@id': `${canonicalUrl}#webpage`,
+          url: canonicalUrl,
+          name: page.title,
+          description: page.description,
+          inLanguage: 'en-IN',
+          isPartOf: { '@id': `${siteUrl}/#website` },
+          about: { '@id': `${siteUrl}/#school` },
+        })}
+      </script>
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content={page.title} />
       <meta name="twitter:description" content={page.description} />

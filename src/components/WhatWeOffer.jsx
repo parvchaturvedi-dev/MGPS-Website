@@ -4,8 +4,8 @@ import { motion as Motion, useInView } from "framer-motion";
 const offers = [
   {
     id: "01",
-    title: "CBSE Curriculum",
-    description: "A robust academic framework from Pre-Nursery to Grade 10, focusing on conceptual clarity and future-ready skills.",
+    title: "RBSE Curriculum",
+    description: "An RBSE academic framework from Pre-Nursery to Grade 10, supported by CBSE-inspired teaching methods for conceptual clarity and future-ready skills.",
     tag: "Academics"
   },
   {

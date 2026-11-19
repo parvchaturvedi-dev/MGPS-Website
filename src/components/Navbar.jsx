@@ -41,7 +41,12 @@ const Navbar = () => {
         </a></span>
         </div>
         
-          <a href="https://www.mghub.marigoldschoolbehror.com" className="cursor-pointer hover:underline">
+          <a
+            href="https://www.mghub.marigoldschoolbehror.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cursor-pointer hover:underline"
+          >
             Login
           </a>
         
