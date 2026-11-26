@@ -20,12 +20,14 @@ const ContactUs = lazy(() => import("./pages/ContactUs"));
 const Curriculum = lazy(() => import("./pages/Curriculum"));
 const Discipline = lazy(() => import("./pages/Discipline"));
 const ExamResult = lazy(() => import("./pages/ExamResult"));
+const BoardClassResults = lazy(() => import("./pages/BoardClassResults"));
 const Fees = lazy(() => import("./pages/Fees"));
 const Gallery = lazy(() => import("./pages/Gallery"));
 const OurCofounder = lazy(() => import("./pages/OurCofounder"));
 const OurFounder = lazy(() => import("./pages/OurFounder"));
 const OurHistory = lazy(() => import("./pages/OurHistory"));
 const Scholarships = lazy(() => import("./pages/Scholarships"));
+const SiteMap = lazy(() => import("./pages/SiteMap"));
 const PrivacyPolicy = lazy(() =>
   import("./pages/LegalPages").then((pages) => ({ default: pages.PrivacyPolicy })),
 );
@@ -111,12 +113,25 @@ function App() {
                   <Route path="/curriculum" element={<Curriculum />} />
                   <Route path="/discipline" element={<Discipline />} />
                   <Route path="/exam-result" element={<ExamResult />} />
+                  <Route
+                    path="/exam-result/class-5"
+                    element={<BoardClassResults gradeKey="class-5" />}
+                  />
+                  <Route
+                    path="/exam-result/class-8"
+                    element={<BoardClassResults gradeKey="class-8" />}
+                  />
+                  <Route
+                    path="/exam-result/class-10"
+                    element={<BoardClassResults gradeKey="class-10" />}
+                  />
                   <Route path="/fees" element={<Fees />} />
                   <Route path="/gallery" element={<Gallery />} />
                   <Route path="/our-cofounder" element={<OurCofounder />} />
                   <Route path="/our-founder" element={<OurFounder />} />
                   <Route path="/our-history" element={<OurHistory />} />
                   <Route path="/scholarships" element={<Scholarships />} />
+                  <Route path="/sitemap" element={<SiteMap />} />
                   <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                   <Route path="/cookie-policy" element={<CookiePolicy />} />
                   <Route path="/terms" element={<TermsOfUse />} />

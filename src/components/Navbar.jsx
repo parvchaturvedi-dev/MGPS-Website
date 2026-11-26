@@ -63,9 +63,9 @@ const Navbar = () => {
               className="w-10 h-10 rounded-xl"
             />
             <div>
-              <h1 className="font-bold text-lg leading-tight">
+              <p className="font-bold text-lg leading-tight">
                 Marigold Secondary School
-              </h1>
+              </p>
               <p className="text-xs text-slate-500 uppercase tracking-[0.18em]">
                 Behror, Rajasthan
               </p>

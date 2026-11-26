@@ -20,11 +20,14 @@
 - [Admission Process](https://www.marigoldschoolbehror.com/admission-process): Steps and information for applying.
 - [Admission Policy](https://www.marigoldschoolbehror.com/admission-policy): Admission policy and requirements.
 - [Admission Form](https://www.marigoldschoolbehror.com/admission-form): Admission application.
+- [Exams and Results](https://www.marigoldschoolbehror.com/exam-result): Class-wise results for Classes 5, 8 and 10. Student details displayed on the page are verified against school records and published only with parent or guardian permission.
 - [Fees](https://www.marigoldschoolbehror.com/fees): Fee information.
 - [Scholarships](https://www.marigoldschoolbehror.com/scholarships): Scholarship information.
 - [Our History](https://www.marigoldschoolbehror.com/our-history): School history.
 - [Contact Us](https://www.marigoldschoolbehror.com/contact-us): Official contact information and location.
 - [Gallery](https://www.marigoldschoolbehror.com/gallery): School events and campus photos.
+- [Website Sitemap](https://www.marigoldschoolbehror.com/sitemap): Categorized index of pages on the official website.
+- [XML Sitemap](https://www.marigoldschoolbehror.com/sitemap.xml): Machine-readable URLs for search engine discovery.
 
 For a detailed, machine-readable school overview, see [llms-full.txt](https://www.marigoldschoolbehror.com/llms-full.txt).
 

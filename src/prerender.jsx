@@ -11,12 +11,14 @@ import ContactUs from "./pages/ContactUs";
 import Curriculum from "./pages/Curriculum";
 import Discipline from "./pages/Discipline";
 import ExamResult from "./pages/ExamResult";
+import BoardClassResults from "./pages/BoardClassResults";
 import Fees from "./pages/Fees";
 import Gallery from "./pages/Gallery";
 import OurCofounder from "./pages/OurCofounder";
 import OurFounder from "./pages/OurFounder";
 import OurHistory from "./pages/OurHistory";
 import Scholarships from "./pages/Scholarships";
+import SiteMap from "./pages/SiteMap";
 import { CookiePolicy, PrivacyPolicy, TermsOfUse } from "./pages/LegalPages";
 import { pageMetadata, siteUrl } from "./seoMetadata";
 
@@ -30,12 +32,16 @@ const pages = {
   "/curriculum": Curriculum,
   "/discipline": Discipline,
   "/exam-result": ExamResult,
+  "/exam-result/class-5": () => <BoardClassResults gradeKey="class-5" />,
+  "/exam-result/class-8": () => <BoardClassResults gradeKey="class-8" />,
+  "/exam-result/class-10": () => <BoardClassResults gradeKey="class-10" />,
   "/fees": Fees,
   "/gallery": Gallery,
   "/our-cofounder": OurCofounder,
   "/our-founder": OurFounder,
   "/our-history": OurHistory,
   "/scholarships": Scholarships,
+  "/sitemap": SiteMap,
   "/privacy-policy": PrivacyPolicy,
   "/cookie-policy": CookiePolicy,
   "/terms": TermsOfUse,

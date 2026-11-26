@@ -227,9 +227,9 @@ const FullFooter = () => {
               <Link to="/terms" className="text-[10px] font-mono uppercase tracking-widest text-gray-500 hover:text-black transition-colors">
                 Terms
               </Link>
-              <a href="/sitemap.xml" className="text-[10px] font-mono uppercase tracking-widest text-gray-500 hover:text-black transition-colors">
+              <Link to="/sitemap" className="text-[10px] font-mono uppercase tracking-widest text-gray-500 hover:text-black transition-colors">
                 Sitemap
-              </a>
+              </Link>
               <button
                 type="button"
                 onClick={openPreferences}
